@@ -1,9 +1,7 @@
 .hero-unit{:"ng-controller" => "MainController as main"}
   %h1 {{'general.YO' | translate}}
-  %p You now have
-  %ul
-    %li{:"ng-repeat" => "thing in main.awesomeThings"} {{thing}}
+  %p Test Get File API
 
-  %button{:"ng-click" => "doPut()"} Click to DoPut
+  %button{:"ng-click" => "doPut()", :"ng-disabled" => "!isReady()"} Click to DoPut
   %p installed.
   %h3 Enjoy coding! - Yeoman
