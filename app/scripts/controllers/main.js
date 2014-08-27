@@ -1,4 +1,4 @@
-/*global alert, console */
+/*global console */
 'use strict';
 
 (function () {
@@ -23,18 +23,16 @@
       $http({
         method: 'put',
         //url: 'http://static.pizza.wixpress.com/_api/add_file_named2',
-        url: 'http://static.pizza.wixpress.com/_api/add_file_named2',
+        url: '/_api/static/add_file_named2',
         headers: {
           'X-Prospero-Filename': '98080808098.jpg',
           'X-Prospero-Mediasource': 'media'
         },
-        data: image
+        data: 'test'
       }).success(function (data, status) {
-        debugger;
-        alert('** SUCCESS ** Status:' + status);
+        console.log('** SUCCESS ** Status:' + status);
       }).error(function (data, status) {
-        debugger;
-        alert('** FAILED ** Status:' + status);
+        console.error('** FAILED ** Status:' + status);
       });
     };
 
